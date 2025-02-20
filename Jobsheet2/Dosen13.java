@@ -15,21 +15,35 @@ public class Dosen13 {
         System.out.println("bidang keahlian dosen: " + bidangKeahlian);
     }
 
+    public Dosen13() {
+        
+    }
+
+    public Dosen13(String id, String n, boolean s, int t, String b) {
+        idDosen = id;
+        nama = n;
+        statusAktif = s;
+        tahunBergabung = t;
+        bidangKeahlian = b;
+
+    }
+
     public void setStatusAktif(boolean status) {
         if (status == true) {
-            System.out.println("dosen aktif");
+            System.out.println( nama + " aktif");
         } else {
-            System.out.println("dosen tidak aktif");
+            System.out.println( nama + " tidak aktif");
         }
     }
     
     void hitungMasakerja(int thnSkrg) {
-        int masaKerja = thnSkrg - tahunBergabung;
-        System.out.println("masa kerja dosen: " + masaKerja);
+        thnSkrg -= tahunBergabung;
+        System.out.println("masa kerja dosen: " + thnSkrg + " tahun");
     }
 
     void ubahKeahlian(String bidang) {
         bidangKeahlian = bidang;
+        System.out.println("bidang keahlian dosen baru: " + bidangKeahlian);
     }
 
 
