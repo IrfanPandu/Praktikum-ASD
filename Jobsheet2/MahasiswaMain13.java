@@ -25,6 +25,6 @@ public class MahasiswaMain13 {
         mhsIrfanpandu.tampilkanInformasi();
       
 
-    }
+     }
 }
     

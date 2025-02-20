@@ -51,5 +51,5 @@ public class Mahasiswa13 {
             return "kinerja kurang";
             
         }
-    }
+     }
 }
