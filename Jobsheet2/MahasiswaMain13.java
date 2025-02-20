@@ -20,9 +20,9 @@ public class MahasiswaMain13 {
         mhs2.updateIPK(3.30);
         mhs2.tampilkanInformasi();
 
-        Mahasiswa13 mhs3 = new Mahasiswa13("Irfan Pandu Pratama","244107020193",3.80,"TI 1E");
-        mhs3.updateIPK(3.90);
-        mhs3.tampilkanInformasi();
+        Mahasiswa13 mhsIrfanpandu = new Mahasiswa13("Irfan Pandu Pratama","244107020193",3.80,"TI 1E");
+        mhsIrfanpandu.updateIPK(3.90);
+        mhsIrfanpandu.tampilkanInformasi();
       
 
     }
