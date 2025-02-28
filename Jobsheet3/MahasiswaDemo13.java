@@ -24,6 +24,7 @@ public class MahasiswaDemo13 {
             System.out.println("------------------------");
             
         }
+        Mahasiswa13.cetakInfo(arrayOfMahasiswa13);
 
         for (int i = 0; i < 3; i++) {
             System.out.println("Data Mahasiswa ke-" + (i+1));
@@ -51,6 +52,8 @@ public class MahasiswaDemo13 {
         arrayOfMahasiswa13[2].nama = " DIRHAMAWAN PUTRANTO";
         arrayOfMahasiswa13[2].kelas = "TI-2E";
         arrayOfMahasiswa13[2].ipk = (float) 3.80;
+
+
 
 
 
