@@ -11,7 +11,7 @@ public class MahasiswaDemo13 {
 
         for (int i = 0; i < arrayOfMahasiswa13.length; i++) {
             arrayOfMahasiswa13[i] = new Mahasiswa13();
-            System.out.println("Masukkan Data Mahasiswa ke-" + (i+1));
+            System.out.println("Masuarrkkan Data Mahasiswa ke-" + (i+1));
             System.out.print("NIM     : ");
             arrayOfMahasiswa13[i].nim = sc.nextLine();
             System.out.print("Nama    : ");
