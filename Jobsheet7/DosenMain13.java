@@ -12,7 +12,8 @@ public class DosenMain13 {
             System.out.println("2. Tampil Data Dosen");
             System.out.println("3. Sorting ASC (Usia Termuda ke Tertua)");
             System.out.println("4. Sorting DSC (Usia Tertua ke Termuda)");
-            System.out.println("5. Keluar");
+            System.out.println("5. Cari Data Dosen");
+            System.out.println("6. Keluar");
             System.out.print("Pilih menu: ");
             int pilihan = scanner.nextInt();
             scanner.nextLine();
@@ -44,6 +45,14 @@ public class DosenMain13 {
                     dosen.tampil();
                     break;
                 case 5:
+                    System.out.print("Masukkan usia dosen yang ingin dicari: ");
+                    int usiaCari = scanner.nextInt();
+                    scanner.nextLine();
+                
+                    dosen.sortingAsc(); 
+                    dosen.pencarianDataBinary(usiaCari);
+                    break;
+                case 6:
                     System.out.println("Keluar dari program.");
                     scanner.close();
                     return;

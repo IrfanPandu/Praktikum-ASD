@@ -1,17 +1,19 @@
 package Jobsheet7;
 
 public class MahasiswaBerprestasi13 {
-        Mahasiswa13 [] listMhs = new Mahasiswa13[5];
+        Mahasiswa13 [] listMhs;
         int idx;
-        double cari;
+        MahasiswaBerprestasi13(int jumMhs){
+            listMhs = new Mahasiswa13[jumMhs];
+        }
 
 
         void tambah (Mahasiswa13 m){
             if (idx<listMhs.length){ 
-                listMhs[idx] = m;
+                listMhs[idx] = new Mahasiswa13(m.nim,m.nama,m.kelas,m.ipk);
                 idx++;
             } else {
-                System.out.println("data sudah");
+                System.out.println("data sudah penuh");
             }
         }
             void tampil(){
@@ -60,15 +62,7 @@ public class MahasiswaBerprestasi13 {
             }
         }
 
-        int sequentialSearching(double cari){
-            int posisi = -1;
-            for (int j =  0; j < listMhs.length; j++){
-                if (listMhs[j].ipk==cari) {
-                    posisi = j;
-                }
-            }
-            return posisi;
-        }
+   
 
         int findBinarySearch(double cari, int left, int right){
             int mid;
@@ -77,7 +71,7 @@ public class MahasiswaBerprestasi13 {
                 if (cari == listMhs[mid].ipk) {
                     return (mid);
                 }
-                else if (listMhs[mid].ipk>cari) {
+                else if (listMhs[mid].ipk<cari) {
                     return findBinarySearch(cari, left, mid-1);                    
                 }else{
                     return findBinarySearch(cari, mid+1, right);
