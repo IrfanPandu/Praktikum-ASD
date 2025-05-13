@@ -9,10 +9,8 @@ public class MahasiswaDemo13 {
             System.out.println("\nMenu:");
             System.out.println("1. Mengumpulkan Tugas");
             System.out.println("2. Menilai Tugas");
-            System.out.println("3. Melihat Tugas Teratas (terakhir dikumpulkan)");
-            System.out.println("4. Melihat Tugas Terbawah (pertama dikumpulkan)");
-            System.out.println("5. Melihat Daftar Tugas");
-            System.out.println("6. Jumlah tugas yang dikumpulkan");
+            System.out.println("3. Melihat Tugas Teratas");
+            System.out.println("4. Melihat Daftar Tugas");
             System.out.print("Pilih: ");
             pilih = sc.nextInt();
             sc.nextLine();
@@ -36,8 +34,6 @@ public class MahasiswaDemo13 {
                         int nilai = sc.nextInt();
                         dinilai.tugasDinilai(nilai);
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
-                        String biner = stack.konversiDesimalKeBiner(nilai);
-                        System.out.println("Nilai Biner Tugas: " + biner);
                     }
                     break;
                 case 3:
@@ -47,19 +43,9 @@ public class MahasiswaDemo13 {
                     }
                     break;
                 case 4:
-                    Mahasiswa13 lihatTerbawah = stack.peekBottom();
-                    if (lihatTerbawah != null) {
-                    System.out.println("Tugas pertama dikumpulkan oleh " + lihatTerbawah.nama);
-                    }
-                    break;
-                case 5:
                     System.out.println("Daftar semua tugas");
                     System.out.println("Nama\tNIM\tKelas");
                     stack.print();
-                    break;
-                case 6:
-                    int jumlahTugas = stack.jumlahTugas();
-                    System.out.println("jumlah tugas yang telah dikumpulkan : " + jumlahTugas);
                     break;
                 default:
                     System.out.println("Pilihan tidak valid.");
